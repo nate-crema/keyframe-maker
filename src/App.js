@@ -34,10 +34,10 @@ function App({ props }) {
       gridTemplateRows: `${ display_rate * 100 }% ${ keyframe_rate * 100 }%`,
     }}>
       <displayObjectDispatch.Provider value={ objectDispatch }>
-        <displayObjectState value={ objects_state }>
+        <displayObjectState.Provider value={ objects_state }>
           <Display/>
           <Keyframe/>
-        </displayObjectState>
+        </displayObjectState.Provider>
       </displayObjectDispatch.Provider>
     </div>
     <div className="code-area area-block">
