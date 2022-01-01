@@ -2,3 +2,15 @@
     --theme-color: rgb(247, 189, 0);
     --theme-shadow-color: rgb(145, 112, 6);
 }
+
+.area-block {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    transition: all .2s cubic-bezier(0.05, 0.74, 0.25, 1);
+}

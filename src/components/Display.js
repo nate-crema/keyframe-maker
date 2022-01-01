@@ -1,10 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 
+// css
+import "../css/components/Display.css";
+
 function Display({ props }) {
 
-    
+    return <div className="display-area area-block">
 
-    return <div></div>;
+    </div>;
 }
 
 export default Display;
