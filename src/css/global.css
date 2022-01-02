@@ -14,3 +14,45 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     transition: all .2s cubic-bezier(0.05, 0.74, 0.25, 1);
 }
+
+.area-block .menu {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(82, 82, 82);
+    overflow: hidden;
+}
+
+.area-block .menu .menu-text {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .2s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.area-block .menu .menu-text:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+.area-block .menu .menu-text:first-child {
+    margin-left: 50px;
+}
+
+.area-block .menu .menu-text.focus {
+    background-color: rgb(66, 66, 66);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}

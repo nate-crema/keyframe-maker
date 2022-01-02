@@ -5,8 +5,8 @@ import Keyframe from "./components/Keyframe";
 import Display from "./components/Display";
 
 // contexts
-import { displayObjectState, displayObjectDispatch } from './global/Context';
-import { displayObjectReducer } from './global/Reducer';
+import { globalStateContext, globalDispatchContext, globalInitState } from './global/Context';
+import { globalReducer } from './global/Reducer';
 
 // css
 import "./css/global.css";
@@ -22,8 +22,7 @@ function App({ props }) {
   const [ codearea_rate, setCodeAreaRate ] = useState(0.25);
 
   // global contexts
-  const objects_init = [];
-  const [ objects_state, objectDispatch ] = useReducer( displayObjectReducer, objects_init );
+  const [ state, dispatch ] = useReducer( globalReducer, globalInitState );
 
   return <div className="main-wrap"
     style={{
@@ -33,12 +32,12 @@ function App({ props }) {
     <div className="ui-area" style={{
       gridTemplateRows: `${ display_rate * 100 }% ${ keyframe_rate * 100 }%`,
     }}>
-      <displayObjectDispatch.Provider value={ objectDispatch }>
-        <displayObjectState.Provider value={ objects_state }>
+      <globalDispatchContext.Provider value={ dispatch }>
+        <globalStateContext.Provider value={ state }>
           <Display/>
           <Keyframe/>
-        </displayObjectState.Provider>
-      </displayObjectDispatch.Provider>
+        </globalStateContext.Provider>
+      </globalDispatchContext.Provider>
     </div>
     <div className="code-area area-block">
 

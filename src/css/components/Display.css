@@ -1,7 +1,28 @@
 .display-area {
     background-color: rgb(200, 200, 200);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 30px auto;
 }
 
-.object {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+.display-area .stage {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+}
+
+/* object styling */
+.display-object {
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: translate(-50%, -50%);
+}
+.otype_Ball {
+    border-radius: 50%;
 }
