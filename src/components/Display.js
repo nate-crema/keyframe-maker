@@ -35,7 +35,7 @@ function Display({ props }) {
         if ( default_exists ) return;
 
         // add default object
-        const ballObject = new Ball(true, { width: "70px", height: "70px" });
+        const ballObject = new Ball(true, "기본객체", { width: "70px", height: "70px" });
         dispatch({ type: "display/add", info: ballObject });
     }, []);
 

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef, useReducer } from 'react';
 // components
 import Keyframe from "./components/Keyframe";
 import Display from "./components/Display";
+import Settings from "./components/Settings";
 
 // contexts
 import { globalStateContext, globalDispatchContext, globalInitState } from './global/Context';
@@ -29,19 +30,17 @@ function App({ props }) {
       gridTemplateColumns: `${ uiarea_rate * 100 }% ${ codearea_rate * 100 }%`
     }}
   >
-    <div className="ui-area" style={{
-      gridTemplateRows: `${ display_rate * 100 }% ${ keyframe_rate * 100 }%`,
-    }}>
-      <globalDispatchContext.Provider value={ dispatch }>
-        <globalStateContext.Provider value={ state }>
+    <globalDispatchContext.Provider value={ dispatch }>
+      <globalStateContext.Provider value={ state }>
+        <div className="ui-area" style={{
+          gridTemplateRows: `${ display_rate * 100 }% ${ keyframe_rate * 100 }%`,
+        }}>
           <Display/>
           <Keyframe/>
-        </globalStateContext.Provider>
-      </globalDispatchContext.Provider>
-    </div>
-    <div className="code-area area-block">
-
-    </div>
+        </div>
+        <Settings/>
+      </globalStateContext.Provider>
+    </globalDispatchContext.Provider>
   </div>;
 }
 

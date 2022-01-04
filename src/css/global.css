@@ -1,6 +1,12 @@
 :root {
-    --theme-color: rgb(247, 189, 0);
-    --theme-shadow-color: rgb(145, 112, 6);
+    --color-A: rgb(48, 48, 48);
+    --color-B: rgb(56, 56, 56);
+    --color-C: rgb(66, 66, 66);
+    --color-D: rgb(160, 160, 160);
+    --color-E: rgb(172, 172, 172);
+    --color-F: rgb(200, 200, 200);
+    --color-G: rgb(230, 230, 230);
+    --color-H: rgb(240, 240, 240);
 }
 
 .area-block {
@@ -23,7 +29,8 @@
     left: 50%;
     transform: translate(-50%);
     background-color: rgb(82, 82, 82);
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .area-block .menu .menu-text {

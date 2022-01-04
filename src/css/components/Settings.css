@@ -1,0 +1,43 @@
+.code-area {
+    background-color: var(--color-H);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 30px auto;
+}
+
+.code-area .tabs-control {
+    width: 80%;
+    height: calc(100% - 60px);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* OptionBlock CSS */
+.option-block {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    background-color: var(--color-F);
+    border-radius: 10px;
+    transition: all .2s cubic-bezier(0, 0.76, 0.25, 1);
+    overflow: hidden;
+}
+
+.option-block.closed {
+    height: 55px !important;
+}
+
+.option-block .option-title {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--color-A);
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    padding: 15px 25px;
+    cursor: pointer;
+    user-select: none;
+}

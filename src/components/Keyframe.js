@@ -8,10 +8,13 @@ import "../css/components/Keyframe.css";
 
 function ObjectOnKeyframe({ obj }) {
     return <div className="object-keyframe">
-        <div className="title-area">
-            
+        <div className="info-area">
+            <div className="object-title">
+                <p className="object-title-text">{ obj.getName() }</p>
+                <p className="object-info-text">{ obj.getSubInfoText() }</p>
+            </div>
         </div>
-        <div className="title-area">
+        <div className="timeline-area">
             
         </div>
     </div>
@@ -44,6 +47,7 @@ function Keyframe({ props }) {
                 <div className="objects-info">
                     <span className="info-text">타임라인: { keyframe.total_time }초</span>
                 </div>
+                { objects.map(obj => <ObjectOnKeyframe obj={obj}/>) }
             </div>
         </div>
     </div>;

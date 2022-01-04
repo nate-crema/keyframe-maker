@@ -23,5 +23,5 @@
 }
 
 .main-wrap .code-area { 
-    background-color: rgb(48, 48, 48);
+    background-color: var(--color-A);
 }

@@ -12,8 +12,9 @@ const createObjectId = function() {
 // Display Object
 
 export class DisplayObject {
-    constructor( id, type, size ) {
+    constructor( id, name, type, size ) {
         this.id = id;
+        this.name = name || "이름없는 객체";
         this.type = type;
         this.isDefault = false;
         this.created = new Date();
@@ -30,11 +31,17 @@ export class DisplayObject {
     getId() {
         return this.id;
     }
+    getName() {
+        return this.name;
+    }
     getType() {
         return this.type;
     }
     getStyle() {
         return this.style;
+    }
+    getSubInfoText() {
+        return `${ this.type }, id: ${ this.id }`;
     }
     getCurrentLocation() {
         return this.location;
@@ -47,8 +54,8 @@ export class DisplayObject {
 // Display Sample Object
 
 export class Ball extends DisplayObject {
-    constructor( isDefault, size ) {
-        super( createObjectId(), "Ball", size || { width: "50px", height: "50px" } );
+    constructor( isDefault, name, size ) {
+        super( createObjectId(), name, "Ball", size || { width: "50px", height: "50px" } );
         this.isDefault = isDefault || false;
     }
 }
